@@ -1,0 +1,17 @@
+
+apply plugin: 'ca.chrisdore.gradle.reporesolve'
+
+rootProject.name = 'gradle-repo-resolve-plugin'
+
+repoResolve {
+    repo( 'name1' ) {
+        maven { url = 'http://url1' }
+    }
+    repo( 'name2' ) {
+        maven { url = 'http://url2' }
+    }
+    repo( 'jcenter' ) {
+        jcenter()
+        mavenCentral()
+    }
+}
